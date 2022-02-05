@@ -27,7 +27,7 @@ with sqlite3.connect('db_new.sqlite3') as db:
 
     query = """SELECT CourseEnrollment.course_id, Course.name, COUNT(*) as count FROM Course
     JOIN CourseEnrollment ON Course.course_id = CourseEnrollment.course_id 
-    GROUP BY CourseEnrollment.course_id HAVING count >= 10  """
+    GROUP BY CourseEnrollment.course_id HAVING count >= 25  """
 
     cursor.execute(query)
 
